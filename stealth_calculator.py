@@ -65,25 +65,26 @@ class StealthCalculator:
             return self._edit_distance_similarity(s1, s2)
 
 
-if __name__ == "__main__":
-
-    calc = StealthCalculator()
-
-    original = "iPhone 16 Pro features a sleek lightweight titanium design"
-
-    # small perturbation (should be stealthy)
-    subtle = "iPhone 16 Pro features a sleek lightweight tit@nium design"
-
-    # large perturbation (should be less stealthy)
-    obvious = "iPhone 16 Pro xyz random words titanium"
-
-    print("Stealthiness Scores (higher = more stealthy):\n")
-
-    print("Token-level method (edit distance):")
-    print(f"  Subtle change: {calc.calculate_stealthiness(original, subtle, method='token'):.3f}")
-    print(f"  Obvious change: {calc.calculate_stealthiness(original, obvious, method='token'):.3f}")
-    print()
-
-    print("Word-level method (BERTScore):")
-    print(f"  Subtle change: {calc.calculate_stealthiness(original, subtle, method='word'):.3f}")
-    print(f"  Obvious change: {calc.calculate_stealthiness(original, obvious, method='word'):.3f}")
+# === Usage Example ===
+# if __name__ == "__main__":
+#
+#     calc = StealthCalculator()
+#
+#     original = "iPhone 16 Pro features a sleek lightweight titanium design"
+#
+#     # small perturbation (should be stealthy)
+#     subtle = "iPhone 16 Pro features a sleek lightweight tit@nium design"
+#
+#     # large perturbation (should be less stealthy)
+#     obvious = "iPhone 16 Pro xyz random words titanium"
+#
+#     print("Stealthiness Scores (higher = more stealthy):\n")
+#
+#     print("Token-level method (edit distance):")
+#     print(f"  Subtle change: {calc.calculate_stealthiness(original, subtle, method='token'):.3f}")
+#     print(f"  Obvious change: {calc.calculate_stealthiness(original, obvious, method='token'):.3f}")
+#     print()
+#
+#     print("Word-level method (BERTScore):")
+#     print(f"  Subtle change: {calc.calculate_stealthiness(original, subtle, method='word'):.3f}")
+#     print(f"  Obvious change: {calc.calculate_stealthiness(original, obvious, method='word'):.3f}")
