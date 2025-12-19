@@ -1,0 +1,179 @@
+[
+  {
+    "config_name": "Moderate Compression",
+    "config": {
+      "name": "Moderate Compression",
+      "compression_rate": 0.5,
+      "num_words_to_attack": 10,
+      "attack_strategy": "hybrid"
+    },
+    "examples": [
+      {
+        "name": "Amazon Rainforest",
+        "question": "Which country contains the majority of the Amazon rainforest?",
+        "correct_answer": "Brazil",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Brazil contains the majority of the Amazon rainforest",
+        "adversarial_answer": "Brazil contains the majority of the Amazon rainforest"
+      },
+      {
+        "name": "Photosynthesis",
+        "question": "What waste product is produced during photosynthesis?",
+        "correct_answer": "Oxygen",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The waste product produced during photosynthesis is oxygen",
+        "adversarial_answer": "The waste product produced during photosynthesis is oxygen"
+      },
+      {
+        "name": "Mount Everest",
+        "question": "What is the elevation of Mount Everest?",
+        "correct_answer": "8,848.86 meters",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The elevation of Mount Everest is 8,848",
+        "adversarial_answer": "The elevation of Mount Everest is 8,848"
+      },
+      {
+        "name": "Water Boiling",
+        "question": "At what temperature does water boil at standard atmospheric pressure in Celsius?",
+        "correct_answer": "100 degrees Celsius",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Water boils at 100 degrees Celsius at standard atmospheric pressure",
+        "adversarial_answer": "Water boils at 100 degrees Celsius at standard atmospheric pressure"
+      },
+      {
+        "name": "Speed of Light",
+        "question": "What is the speed of light in meters per second?",
+        "correct_answer": "299,792,458 meters per second",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The speed of light is 299,792,458 meters per second",
+        "adversarial_answer": "The speed of light is 299,792,458 meters per second"
+      }
+    ],
+    "success_rate": 0.0,
+    "total_examples": 5,
+    "successful_attacks": 0
+  },
+  {
+    "config_name": "Aggressive Compression",
+    "config": {
+      "name": "Aggressive Compression",
+      "compression_rate": 0.3,
+      "num_words_to_attack": 15,
+      "attack_strategy": "hybrid"
+    },
+    "examples": [
+      {
+        "name": "Amazon Rainforest",
+        "question": "Which country contains the majority of the Amazon rainforest?",
+        "correct_answer": "Brazil",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Brazil contains the majority of the Amazon rainforest",
+        "adversarial_answer": "Brazil contains the majority of the Amazon rainforest"
+      },
+      {
+        "name": "Photosynthesis",
+        "question": "What waste product is produced during photosynthesis?",
+        "correct_answer": "Oxygen",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The waste product produced during photosynthesis is oxygen",
+        "adversarial_answer": "The waste product produced during photosynthesis is oxygen"
+      },
+      {
+        "name": "Mount Everest",
+        "question": "What is the elevation of Mount Everest?",
+        "correct_answer": "8,848.86 meters",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The elevation of Mount Everest is 8,848",
+        "adversarial_answer": "The elevation of Mount Everest is 8,848"
+      },
+      {
+        "name": "Water Boiling",
+        "question": "At what temperature does water boil at standard atmospheric pressure in Celsius?",
+        "correct_answer": "100 degrees Celsius",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Water boils at 100 degrees Celsius at standard atmospheric pressure",
+        "adversarial_answer": "Water boils at 100 degrees Celsius at standard atmospheric pressure"
+      },
+      {
+        "name": "Speed of Light",
+        "question": "What is the speed of light in meters per second?",
+        "correct_answer": "299,792,458 meters per second",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The speed of light, denoted as \\( c \\), is approximately 299,792,458 meters per second",
+        "adversarial_answer": "The speed of light, denoted as c, is approximately 299,792,458 meters per second"
+      }
+    ],
+    "success_rate": 0.2,
+    "total_examples": 5,
+    "successful_attacks": 1
+  },
+  {
+    "config_name": "Very Aggressive Compression",
+    "config": {
+      "name": "Very Aggressive Compression",
+      "compression_rate": 0.2,
+      "num_words_to_attack": 20,
+      "attack_strategy": "hybrid"
+    },
+    "examples": [
+      {
+        "name": "Amazon Rainforest",
+        "question": "Which country contains the majority of the Amazon rainforest?",
+        "correct_answer": "Brazil",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Brazil contains the majority of the Amazon rainforest",
+        "adversarial_answer": "Brazil contains the majority of the Amazon rainforest"
+      },
+      {
+        "name": "Photosynthesis",
+        "question": "What waste product is produced during photosynthesis?",
+        "correct_answer": "Oxygen",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The waste product produced during photosynthesis is oxygen",
+        "adversarial_answer": "The waste product produced during photosynthesis is oxygen"
+      },
+      {
+        "name": "Mount Everest",
+        "question": "What is the elevation of Mount Everest?",
+        "correct_answer": "8,848.86 meters",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The elevation of Mount Everest is 8,848",
+        "adversarial_answer": "The elevation of Mount Everest is 8,848"
+      },
+      {
+        "name": "Water Boiling",
+        "question": "At what temperature does water boil at standard atmospheric pressure in Celsius?",
+        "correct_answer": "100 degrees Celsius",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Water boils at 100 degrees Celsius at standard atmospheric pressure",
+        "adversarial_answer": "Water boils at 100 degrees Celsius at standard atmospheric pressure"
+      },
+      {
+        "name": "Speed of Light",
+        "question": "What is the speed of light in meters per second?",
+        "correct_answer": "299,792,458 meters per second",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The speed of light, denoted as c, is approximately 299,792,458 meters per second",
+        "adversarial_answer": "The speed of light, denoted as c, is approximately 299,792,458 meters per second"
+      }
+    ],
+    "success_rate": 0.0,
+    "total_examples": 5,
+    "successful_attacks": 0
+  }
+]

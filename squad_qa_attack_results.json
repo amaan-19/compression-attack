@@ -1,0 +1,1544 @@
+[
+  {
+    "config_name": "Moderate Compression",
+    "config": {
+      "name": "Moderate Compression",
+      "compression_rate": 0.5,
+      "num_words_to_attack": 10,
+      "attack_strategy": "hybrid"
+    },
+    "examples": [
+      {
+        "id": "squad_0",
+        "title": "Private_school",
+        "question": "In what year did Massachusetts first require children to be educated in schools?",
+        "correct_answer": "1852",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Massachusetts first required children to be educated in schools in the year 1642",
+        "adversarial_answer": "Massachusetts first required children to be educated in schools in the year 1852"
+      },
+      {
+        "id": "squad_1",
+        "title": "Chloroplast",
+        "question": "When were stromules discovered?",
+        "correct_answer": "1962",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Stromules were discovered in 1997",
+        "adversarial_answer": "Stromules were discovered in the 1990s"
+      },
+      {
+        "id": "squad_2",
+        "title": "Victoria_and_Albert_Museum",
+        "question": "Which artist who had a major influence on the Gothic Revival is represented in the V&A's British galleries?",
+        "correct_answer": "Horace Walpole",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The artist who had a major influence on the Gothic Revival and is represented in the V&A's British galleries is Augustus Pugin",
+        "adversarial_answer": "The artist who had a major influence on the Gothic Revival and is represented in the V&A's British galleries is Augustus Pugin"
+      },
+      {
+        "id": "squad_3",
+        "title": "University_of_Chicago",
+        "question": "In 1890, who did the university decide to team up with?",
+        "correct_answer": "several regional colleges and universities",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "In 1896, the University of Chicago decided to team up with Shimer College in Mount Carroll, Illinois",
+        "adversarial_answer": "The context provided does not specify a particular school that the University of Chicago decided to team up with in 1890"
+      },
+      {
+        "id": "squad_4",
+        "title": "Super_Bowl_50",
+        "question": "Who got a touchdown making the score 10-7?",
+        "correct_answer": "Jonathan Stewart",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Cam Newton got a touchdown making the score 10-7",
+        "adversarial_answer": "Jonathan Stewart got the touchdown, making the score 10-7"
+      },
+      {
+        "id": "squad_5",
+        "title": "Private_school",
+        "question": "How many Examination Boards exist in India?",
+        "correct_answer": "30",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "There are 30 different Examination Boards in India",
+        "adversarial_answer": "There are 30 different Examination Boards in India"
+      },
+      {
+        "id": "squad_6",
+        "title": "American_Broadcasting_Company",
+        "question": "Who started rumors in 2008 that ABC would sell its ten owned-and-operated stations?",
+        "correct_answer": "Caris & Co.",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The rumors in 2008 that ABC would sell its ten owned-and-operated stations were started by Disney's then-CEO, Bob Iger",
+        "adversarial_answer": "The rumors in 2008 that ABC would sell its ten owned-and-operated stations were started by analysts"
+      },
+      {
+        "id": "squad_7",
+        "title": "Super_Bowl_50",
+        "question": "Which network broadcasted the 50th Super Bowl game? ",
+        "correct_answer": "CBS",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "CBS broadcasted the 50th Super Bowl game",
+        "adversarial_answer": "CBS broadcasted the 50th Super Bowl game"
+      },
+      {
+        "id": "squad_8",
+        "title": "1973_oil_crisis",
+        "question": "Why was this short termed organization created?",
+        "correct_answer": "coordinate the response to the embargo",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The short-term organization, the Federal Energy Office, was created to coordinate the response to the oil embargo",
+        "adversarial_answer": "The short-term organization, the Federal Energy Office, was created to coordinate the response to the oil embargo"
+      },
+      {
+        "id": "squad_9",
+        "title": "Amazon_rainforest",
+        "question": "What does LGM stands for?",
+        "correct_answer": "Last Glacial Maximum",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "LGM stands for Last Glacial Maximum",
+        "adversarial_answer": "LGM stands for Last Glacial Maximum"
+      },
+      {
+        "id": "squad_10",
+        "title": "Computational_complexity_theory",
+        "question": "What is the paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems?",
+        "correct_answer": "\"Reducibility Among Combinatorial Problems\"",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems is titled \"Reducibility Among Combinatorial Problems",
+        "adversarial_answer": "The paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems is titled \"Reducibility Among Combinatorial Problems"
+      },
+      {
+        "id": "squad_11",
+        "title": "Rhine",
+        "question": "What Lake in a German island Mainau receives a fraction of the Rhine's flow?",
+        "correct_answer": "Lake \u00dcberlingen",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The lake that receives a fraction of the Rhine's flow near the German island Mainau is Lake Constance (Bodensee)",
+        "adversarial_answer": "The lake that receives a fraction of the Rhine's flow near the German island Mainau is Lake Constance (Bodensee)"
+      },
+      {
+        "id": "squad_12",
+        "title": "American_Broadcasting_Company",
+        "question": "What studio does ABC own at 1500 Broadway in NYC?",
+        "correct_answer": "Times Square Studios",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "ABC owns the \"Times Square Studio\" at 1500 Broadway in NYC",
+        "adversarial_answer": "ABC owns the \"Times Square Studios\" at 1500 Broadway in NYC"
+      },
+      {
+        "id": "squad_13",
+        "title": "University_of_Chicago",
+        "question": "How many fraternities are apart of the university?",
+        "correct_answer": "fifteen",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "There are ten fraternities that are part of the University of Chicago",
+        "adversarial_answer": "There are fifteen fraternities at the University of Chicago"
+      },
+      {
+        "id": "squad_14",
+        "title": "American_Broadcasting_Company",
+        "question": "At what address did Goldenson secure a new headquarters for ABC?",
+        "correct_answer": "1330 Avenue of the Americas in Manhattan",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not specify the address where Goldenson secured a new headquarters for ABC",
+        "adversarial_answer": "The context provided does not include the specific address where Goldenson secured a new headquarters for ABC"
+      },
+      {
+        "id": "squad_15",
+        "title": "Imperialism",
+        "question": "Who had established the Russian empire to its former glory prior to 1921?",
+        "correct_answer": "Bolshevik leaders",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Bolshevik leaders had effectively reestablished a polity with roughly the same extent as the Russian empire by 1921",
+        "adversarial_answer": "The context does not specifically mention who established the Russian empire to its former glory prior to 1921"
+      },
+      {
+        "id": "squad_16",
+        "title": "Prime_number",
+        "question": "What does the Riemann hypothesis state the source of irregularity in the distribution of points comes from?",
+        "correct_answer": "random noise",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The Riemann hypothesis states that the source of irregularity in the distribution of prime numbers comes from random noise",
+        "adversarial_answer": "The Riemann hypothesis states that the source of irregularity in the distribution of prime numbers comes from random noise"
+      },
+      {
+        "id": "squad_17",
+        "title": "Martin_Luther",
+        "question": "Which work of Luther's is effective in teaching children?",
+        "correct_answer": "Small Catechism",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Luther's Small Catechism is effective in teaching children",
+        "adversarial_answer": "Luther's Small Catechism is effective in teaching children"
+      },
+      {
+        "id": "squad_18",
+        "title": "Civil_disobedience",
+        "question": "How was the civil disobedience shown in Antigone?",
+        "correct_answer": "obey her conscience rather than human law",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "In Sophocles' play \"Antigone,\" civil disobedience is demonstrated through the actions of Antigone, who chooses to defy King Creon's edict that prohibits the burial of her brother Polynices",
+        "adversarial_answer": "The civil disobedience in Antigone is exemplified by Antigone's decision to defy King Creon's edict prohibiting the burial of her brother Polynices"
+      },
+      {
+        "id": "squad_19",
+        "title": "Ctenophora",
+        "question": "Where do juvenile platyctenids live?",
+        "correct_answer": "among the plankton",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not specify where juvenile platyctenids live",
+        "adversarial_answer": "The context provided does not specifically mention juvenile platyctenids or their habitat"
+      },
+      {
+        "id": "squad_20",
+        "title": "Victoria_(Australia)",
+        "question": "How often are elections held for the Victorian Parliament?",
+        "correct_answer": "every four years",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Elections for the Victorian Parliament are held every four years",
+        "adversarial_answer": "Elections for the Victorian Parliament are held every four years"
+      },
+      {
+        "id": "squad_21",
+        "title": "Force",
+        "question": "What magnetic and electric force acts on a charge?",
+        "correct_answer": "unified electromagnetic",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The forces that act on a charge are the electrostatic force, which is due to the electric field, and the magnetic force, which is due to the magnetic field",
+        "adversarial_answer": "The magnetic and electric forces that act on a charge are the electrostatic force and the magnetic force"
+      },
+      {
+        "id": "squad_22",
+        "title": "Yuan_dynasty",
+        "question": "What kinds of growth did Kublai encourage?",
+        "correct_answer": "commercial, scientific, and cultural",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Kublai Khan encouraged several kinds of growth, including:",
+        "adversarial_answer": "Kublai Khan encouraged several kinds of growth, including:"
+      },
+      {
+        "id": "squad_23",
+        "title": "Doctor_Who",
+        "question": "What was the name of the first episode of the new Doctor Who series?",
+        "correct_answer": "Rose",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The name of the first episode of the new Doctor Who series is \"Rose",
+        "adversarial_answer": "The name of the first episode of the new Doctor Who series is \"Rose"
+      },
+      {
+        "id": "squad_24",
+        "title": "Southern_California",
+        "question": "Each of the extended metropolitan areas has a population that exceeds what number?",
+        "correct_answer": "five million",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Each of the extended metropolitan areas has a population that exceeds five million",
+        "adversarial_answer": "Each of the extended metropolitan areas has a population that exceeds five million"
+      },
+      {
+        "id": "squad_25",
+        "title": "Civil_disobedience",
+        "question": "Why is giving a defiant speech sometimes more harmful for the individual?",
+        "correct_answer": "lack of remorse",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Giving a defiant speech can be more harmful for the individual because it may be perceived as a lack of remorse or contrition, which can negatively influence the court's perception of the defendant",
+        "adversarial_answer": "Giving a defiant speech can be more harmful for the individual because it may suggest a lack of remorse or accountability for their actions"
+      },
+      {
+        "id": "squad_26",
+        "title": "Imperialism",
+        "question": "When were Joseph Schumpeter and Norman Angell at their most prolific writing period?",
+        "correct_answer": "before World War I",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Joseph Schumpeter was most prolific between 1858 and 1940, and Norman Angell was active primarily in the early 20th century, particularly around the time of his notable work published in 1909",
+        "adversarial_answer": "Joseph Schumpeter was most prolific during the years 1858\u20131940, and Norman Angell was active primarily in the early 20th century, particularly around the time of World War I (1914\u20131918)"
+      },
+      {
+        "id": "squad_27",
+        "title": "Economic_inequality",
+        "question": "How do competing businesses attract workers?",
+        "correct_answer": "offering a higher wage",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Competing businesses attract workers by offering competitive wages and benefits that reflect the market price of skills",
+        "adversarial_answer": "Competing businesses attract workers by offering higher wages, better benefits, and improved working conditions to make their job opportunities more appealing"
+      },
+      {
+        "id": "squad_28",
+        "title": "Super_Bowl_50",
+        "question": "How many teams up to Super Bowl 50 have been to the championship game eight times?",
+        "correct_answer": "four",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Up to Super Bowl 50, the teams that have been to the championship game eight times are the Pittsburgh Steelers and the New England Patriots",
+        "adversarial_answer": "Up to Super Bowl 50, the teams that have been to the championship game eight times are the New England Patriots and the Pittsburgh Steelers"
+      },
+      {
+        "id": "squad_29",
+        "title": "Steam_engine",
+        "question": "What plants create most electric power?",
+        "correct_answer": "steam turbine",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Most electric power is generated using steam plants",
+        "adversarial_answer": "Most electric power is generated using steam plants"
+      },
+      {
+        "id": "squad_30",
+        "title": "Newcastle_upon_Tyne",
+        "question": "The epidemic in Newcastle was the most what in any British city at the time?",
+        "correct_answer": "devastating loss",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The epidemic in Newcastle was the most devastating in any British city at the time",
+        "adversarial_answer": "The epidemic in Newcastle was the most severe in any British city at the time"
+      },
+      {
+        "id": "squad_31",
+        "title": "Sky_(United_Kingdom)",
+        "question": "What additional srevice did BSkyB offer besides Video on Demand that they claimed offered \"substantially more value\"?",
+        "correct_answer": "HD channels",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "BSkyB claimed to offer a range of additional services besides Video on Demand, specifically highlighting their exclusive sports and movie channels, as well as other premium content that they argued provided \"substantially more value\" to customers",
+        "adversarial_answer": "BSkyB offered a range of additional services besides Video on Demand, including a broader selection of channels and exclusive content, which they claimed provided \"substantially more value"
+      },
+      {
+        "id": "squad_32",
+        "title": "Nikola_Tesla",
+        "question": "Who did Tesla think would run the world of the future?",
+        "correct_answer": "women",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Tesla believed that women would become the dominant sex and run the world of the future",
+        "adversarial_answer": "Tesla believed that women would become the dominant sex in the future"
+      },
+      {
+        "id": "squad_33",
+        "title": "Islamism",
+        "question": "What have many HT members graduated to joining?",
+        "correct_answer": "terrorist groups",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Many HT members have graduated to joining more militant groups or engaging in armed jihad",
+        "adversarial_answer": "Many HT (Hizb ut-Tahrir) members have graduated to joining armed jihadist groups"
+      },
+      {
+        "id": "squad_34",
+        "title": "Victoria_and_Albert_Museum",
+        "question": "Approximately how many items are in the costume collection of the V&A?",
+        "correct_answer": "over 14,000",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The costume collection of the V&A contains over 14,000 outfits plus accessories",
+        "adversarial_answer": "The costume collection of the V&A contains over 14,000 outfits plus accessories"
+      },
+      {
+        "id": "squad_35",
+        "title": "Fresno,_California",
+        "question": "Which park is home to the Fresno Chafffee Zoo?",
+        "correct_answer": "Roeding Park",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The Fresno Chaffee Zoo is located in Roeding Park",
+        "adversarial_answer": "The park that is home to the Fresno Chaffee Zoo is Roeding Park"
+      },
+      {
+        "id": "squad_36",
+        "title": "Geology",
+        "question": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called what?",
+        "correct_answer": "particular closure temperature",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called the closure temperature",
+        "adversarial_answer": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called the closure temperature"
+      },
+      {
+        "id": "squad_37",
+        "title": "Teacher",
+        "question": "What could someone be investigated for?",
+        "correct_answer": "allegations of professional misconduct",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Someone could be investigated for allegations of professional misconduct",
+        "adversarial_answer": "Someone could be investigated for allegations of professional misconduct"
+      },
+      {
+        "id": "squad_38",
+        "title": "Economic_inequality",
+        "question": "What are examples of economic actors?",
+        "correct_answer": "worker, capitalist/business owner, landlord",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Examples of economic actors include individuals (such as workers and consumers), businesses (such as corporations and small enterprises), government entities (such as regulatory agencies and public institutions), and non-profit organizations",
+        "adversarial_answer": "Examples of economic actors include individuals such as workers and entrepreneurs, businesses or firms, government entities, and organizations like non-profits"
+      },
+      {
+        "id": "squad_39",
+        "title": "Immune_system",
+        "question": "What field involves the study of the immune system?",
+        "correct_answer": "Immunology",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The field that involves the study of the immune system is immunology",
+        "adversarial_answer": "The field that involves the study of the immune system is immunology"
+      },
+      {
+        "id": "squad_40",
+        "title": "Immune_system",
+        "question": "What are the phagocytes that are located in tissues in contact with the external environment called?",
+        "correct_answer": "Dendritic cells",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The phagocytes located in tissues in contact with the external environment are called Dendritic cells (DC)",
+        "adversarial_answer": "The phagocytes located in tissues in contact with the external environment are called dendritic cells (DC)"
+      },
+      {
+        "id": "squad_41",
+        "title": "Newcastle_upon_Tyne",
+        "question": "What did the merchants of Newcastle plot to do to Timothy Dexter?",
+        "correct_answer": "ruin him",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The merchants of Newcastle plotted to undermine Timothy Dexter's coal trade by sending him to Newcastle with a cargo of coal, knowing that it was a place where coal was abundant and thus devaluing his shipment",
+        "adversarial_answer": "The context provided does not contain any information about Timothy Dexter or any plots by the merchants of Newcastle against him"
+      },
+      {
+        "id": "squad_42",
+        "title": "Nikola_Tesla",
+        "question": "What job did Tesla's father have in Gospic?",
+        "correct_answer": "pastor",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Tesla's father, Milutin Tesla, was a writer and a priest in Gospic",
+        "adversarial_answer": "Tesla's father was a writer and a priest in Gospic"
+      },
+      {
+        "id": "squad_43",
+        "title": "Super_Bowl_50",
+        "question": "Which hotel did the Panthers stay at for the Super Bowl?",
+        "correct_answer": "San Jose Marriott.",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The Panthers stayed at the Santa Clara hotel for the Super Bowl",
+        "adversarial_answer": "The context provided does not specify which hotel the Panthers stayed at for the Super Bowl"
+      },
+      {
+        "id": "squad_44",
+        "title": "French_and_Indian_War",
+        "question": "What are other alternative names for French and Indian War?",
+        "correct_answer": "Fourth Intercolonial War and the Great War for the Empire",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Other alternative names for the French and Indian War include the Seven Years' War, particularly in Europe, and it is also referred to as the Anglo-French War (1754\u20131763)",
+        "adversarial_answer": "Other alternative names for the French and Indian War include the Seven Years' War, which is the name used in Europe, and King George's War, although this term more specifically refers to an earlier conflict in the 1740s"
+      },
+      {
+        "id": "squad_45",
+        "title": "Southern_California",
+        "question": "Outside of its use of automobiles, what else is southern California famous for using?",
+        "correct_answer": "highways",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Southern California is also famous for its use of public transportation systems, such as buses and light rail, as well as its bicycle-friendly infrastructure and walkable neighborhoods in certain areas",
+        "adversarial_answer": "Southern California is also famous for its use of public transportation systems, such as buses and light rail, as well as its extensive network of bike paths and pedestrian-friendly areas"
+      },
+      {
+        "id": "squad_46",
+        "title": "Newcastle_upon_Tyne",
+        "question": "What was the last name of the designers of Newcastle's library?",
+        "correct_answer": "Green",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not include information about the last name of the designers of Newcastle's library",
+        "adversarial_answer": "The context provided does not include the last name of the designers of Newcastle's library"
+      },
+      {
+        "id": "squad_47",
+        "title": "Apollo_program",
+        "question": "How many people were on the test flight of the AS-206?",
+        "correct_answer": "unmanned",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The AS-206 test flight was unmanned, so there were no people on board",
+        "adversarial_answer": "The AS-206 test flight was unmanned, so there were zero people on that flight"
+      },
+      {
+        "id": "squad_48",
+        "title": "Southern_California",
+        "question": "What is the state average growth rate?",
+        "correct_answer": "10.0%",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The state average growth rate is 10",
+        "adversarial_answer": "The state average growth rate is 10"
+      },
+      {
+        "id": "squad_49",
+        "title": "Black_Death",
+        "question": "When was the study on sequenced Y genomes published?",
+        "correct_answer": "October 2011",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The study on sequenced Y genomes was published in 2011",
+        "adversarial_answer": "The study on sequenced Y genomes was published in 2011"
+      }
+    ],
+    "success_rate": 0.58,
+    "total_examples": 50,
+    "successful_attacks": 29
+  },
+  {
+    "config_name": "Aggressive Compression",
+    "config": {
+      "name": "Aggressive Compression",
+      "compression_rate": 0.3,
+      "num_words_to_attack": 15,
+      "attack_strategy": "hybrid"
+    },
+    "examples": [
+      {
+        "id": "squad_0",
+        "title": "Private_school",
+        "question": "In what year did Massachusetts first require children to be educated in schools?",
+        "correct_answer": "1852",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Massachusetts first required children to be educated in schools in 1852",
+        "adversarial_answer": "Massachusetts first required children to be educated in schools in the year 1852"
+      },
+      {
+        "id": "squad_1",
+        "title": "Chloroplast",
+        "question": "When were stromules discovered?",
+        "correct_answer": "1962",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Stromules were discovered in the early 1990s",
+        "adversarial_answer": "Stromules were discovered in 1993"
+      },
+      {
+        "id": "squad_2",
+        "title": "Victoria_and_Albert_Museum",
+        "question": "Which artist who had a major influence on the Gothic Revival is represented in the V&A's British galleries?",
+        "correct_answer": "Horace Walpole",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The artist who had a major influence on the Gothic Revival and is represented in the V&A's British galleries is Augustus Pugin",
+        "adversarial_answer": "The artist who had a major influence on the Gothic Revival and is represented in the V&A's British galleries is Augustus Pugin"
+      },
+      {
+        "id": "squad_3",
+        "title": "University_of_Chicago",
+        "question": "In 1890, who did the university decide to team up with?",
+        "correct_answer": "several regional colleges and universities",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "In 1896, the University of Chicago decided to affiliate with Shimer College in Mount Carroll, Illinois",
+        "adversarial_answer": "In 1890, the University of Chicago decided to team up with various colleges, including Kalamazoo College and Shimer College, among others"
+      },
+      {
+        "id": "squad_4",
+        "title": "Super_Bowl_50",
+        "question": "Who got a touchdown making the score 10-7?",
+        "correct_answer": "Jonathan Stewart",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Jonathan Stewart got a touchdown making the score 10-7",
+        "adversarial_answer": "Jonathan Stewart got the touchdown making the score 10-7"
+      },
+      {
+        "id": "squad_5",
+        "title": "Private_school",
+        "question": "How many Examination Boards exist in India?",
+        "correct_answer": "30",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not specify the exact number of Examination Boards that exist in India",
+        "adversarial_answer": "The exact number of Examination Boards in India can vary, as new boards may be established and existing ones may be restructured or dissolved"
+      },
+      {
+        "id": "squad_6",
+        "title": "American_Broadcasting_Company",
+        "question": "Who started rumors in 2008 that ABC would sell its ten owned-and-operated stations?",
+        "correct_answer": "Caris & Co.",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The rumors in 2008 that ABC would sell its ten owned-and-operated stations were started by a report from the Wall Street Journal",
+        "adversarial_answer": "The rumors in 2008 that ABC would sell its ten owned-and-operated stations were started by a report from the Wall Street Journal"
+      },
+      {
+        "id": "squad_7",
+        "title": "Super_Bowl_50",
+        "question": "Which network broadcasted the 50th Super Bowl game? ",
+        "correct_answer": "CBS",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "CBS broadcasted the 50th Super Bowl game",
+        "adversarial_answer": "CBS broadcasted the 50th Super Bowl game"
+      },
+      {
+        "id": "squad_8",
+        "title": "1973_oil_crisis",
+        "question": "Why was this short termed organization created?",
+        "correct_answer": "coordinate the response to the embargo",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The Federal Energy Office was created in response to the energy crisis of the early 1970s, particularly the oil embargo of 1973, which highlighted the vulnerabilities in the United States' energy supply and dependence on foreign oil",
+        "adversarial_answer": "The Federal Energy Office was created in response to the energy crisis of the early 1970s, particularly following the 1973 oil embargo"
+      },
+      {
+        "id": "squad_9",
+        "title": "Amazon_rainforest",
+        "question": "What does LGM stands for?",
+        "correct_answer": "Last Glacial Maximum",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "LGM stands for Last Glacial Maximum",
+        "adversarial_answer": "LGM stands for Last Glacial Maximum"
+      },
+      {
+        "id": "squad_10",
+        "title": "Computational_complexity_theory",
+        "question": "What is the paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems?",
+        "correct_answer": "\"Reducibility Among Combinatorial Problems\"",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems is titled \"Reducibility Among Combinatorial Problems",
+        "adversarial_answer": "The paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems is titled \"Reducibility Among Combinatorial Problems"
+      },
+      {
+        "id": "squad_11",
+        "title": "Rhine",
+        "question": "What Lake in a German island Mainau receives a fraction of the Rhine's flow?",
+        "correct_answer": "Lake \u00dcberlingen",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The lake on the German island Mainau that receives a fraction of the Rhine's flow is Lake Constance (Bodensee)",
+        "adversarial_answer": "The lake on the German island of Mainau that receives a fraction of the Rhine's flow is called the \"Bodensee\" or Lake Constance"
+      },
+      {
+        "id": "squad_12",
+        "title": "American_Broadcasting_Company",
+        "question": "What studio does ABC own at 1500 Broadway in NYC?",
+        "correct_answer": "Times Square Studios",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "ABC owns the studio known as the ABC Times Square Studios at 1500 Broadway in NYC",
+        "adversarial_answer": "ABC owns the ABC Times Square Studios at 1500 Broadway in NYC"
+      },
+      {
+        "id": "squad_13",
+        "title": "University_of_Chicago",
+        "question": "How many fraternities are apart of the university?",
+        "correct_answer": "fifteen",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "There are four fraternities at the University of Chicago",
+        "adversarial_answer": "There are fifteen fraternities that are a part of the university"
+      },
+      {
+        "id": "squad_14",
+        "title": "American_Broadcasting_Company",
+        "question": "At what address did Goldenson secure a new headquarters for ABC?",
+        "correct_answer": "1330 Avenue of the Americas in Manhattan",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not include specific information about the address where Goldenson secured a new headquarters for ABC",
+        "adversarial_answer": "The context provided does not include information about the address where Goldenson secured a new headquarters for ABC"
+      },
+      {
+        "id": "squad_15",
+        "title": "Imperialism",
+        "question": "Who had established the Russian empire to its former glory prior to 1921?",
+        "correct_answer": "Bolshevik leaders",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The Bolshevik leaders had reestablished the Russian empire to its former glory prior to 1921",
+        "adversarial_answer": "The context does not specify a particular individual or group that established the Russian empire to its former glory prior to 1921"
+      },
+      {
+        "id": "squad_16",
+        "title": "Prime_number",
+        "question": "What does the Riemann hypothesis state the source of irregularity in the distribution of points comes from?",
+        "correct_answer": "random noise",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The Riemann hypothesis states that the source of irregularity in the distribution of prime numbers comes from the non-trivial zeros of the Riemann \u03b6-function, specifically that these zeros have a real part equal to 1/2",
+        "adversarial_answer": "The Riemann hypothesis states that the source of irregularity in the distribution of prime numbers comes from the non-trivial zeros of the Riemann zeta function, specifically that all non-trivial zeros have a real part equal to 1/"
+      },
+      {
+        "id": "squad_17",
+        "title": "Martin_Luther",
+        "question": "Which work of Luther's is effective in teaching children?",
+        "correct_answer": "Small Catechism",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Luther's Small Catechism is the work that is effective in teaching children",
+        "adversarial_answer": "Luther's Small Catechism is effective in teaching children"
+      },
+      {
+        "id": "squad_18",
+        "title": "Civil_disobedience",
+        "question": "How was the civil disobedience shown in Antigone?",
+        "correct_answer": "obey her conscience rather than human law",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "In Sophocles' play Antigone, civil disobedience is prominently displayed through the actions of the protagonist, Antigone",
+        "adversarial_answer": "In Sophocles' play \"Antigone,\" civil disobedience is primarily demonstrated through the character of Antigone herself"
+      },
+      {
+        "id": "squad_19",
+        "title": "Ctenophora",
+        "question": "Where do juvenile platyctenids live?",
+        "correct_answer": "among the plankton",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Based on the context provided, it does not specify where juvenile platyctenids live",
+        "adversarial_answer": "Based on the context provided, juvenile platyctenids live in the same environment as adults, as there is no distinctive larval form and development is direct"
+      },
+      {
+        "id": "squad_20",
+        "title": "Victoria_(Australia)",
+        "question": "How often are elections held for the Victorian Parliament?",
+        "correct_answer": "every four years",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Elections for the Victorian Parliament are held every four years",
+        "adversarial_answer": "Elections for the Victorian Parliament are held every four years"
+      },
+      {
+        "id": "squad_21",
+        "title": "Force",
+        "question": "What magnetic and electric force acts on a charge?",
+        "correct_answer": "unified electromagnetic",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The magnetic and electric force that acts on a charge can be described as the Lorentz force",
+        "adversarial_answer": "The electric force acts on a charge due to the electric field, while the magnetic force acts on a charge due to the magnetic field"
+      },
+      {
+        "id": "squad_22",
+        "title": "Yuan_dynasty",
+        "question": "What kinds of growth did Kublai encourage?",
+        "correct_answer": "commercial, scientific, and cultural",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Kublai encouraged scientific growth, commercial growth, and cultural growth",
+        "adversarial_answer": "Kublai Khan encouraged scientific growth, cultural growth, and commercial growth"
+      },
+      {
+        "id": "squad_23",
+        "title": "Doctor_Who",
+        "question": "What was the name of the first episode of the new Doctor Who series?",
+        "correct_answer": "Rose",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The name of the first episode of the new Doctor Who series is \"Rose",
+        "adversarial_answer": "The name of the first episode of the new Doctor Who series is \"Rose"
+      },
+      {
+        "id": "squad_24",
+        "title": "Southern_California",
+        "question": "Each of the extended metropolitan areas has a population that exceeds what number?",
+        "correct_answer": "five million",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Each of the extended metropolitan areas has a population that exceeds 17,786,419",
+        "adversarial_answer": "Each of the extended metropolitan areas has a population that exceeds 17,786,419"
+      },
+      {
+        "id": "squad_25",
+        "title": "Civil_disobedience",
+        "question": "Why is giving a defiant speech sometimes more harmful for the individual?",
+        "correct_answer": "lack of remorse",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Giving a defiant speech can be more harmful for the individual because it may be perceived as a refusal to take responsibility for their actions, which can lead to harsher penalties from the court",
+        "adversarial_answer": "Giving a defiant speech can be more harmful for the individual because it may lead to increased legal repercussions, as it can be interpreted as a refusal to comply with the law or a challenge to authority"
+      },
+      {
+        "id": "squad_26",
+        "title": "Imperialism",
+        "question": "When were Joseph Schumpeter and Norman Angell at their most prolific writing period?",
+        "correct_answer": "before World War I",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Joseph Schumpeter was most prolific between 1858 and 1940, while Norman Angell was active during the years 1883 to 1950",
+        "adversarial_answer": "Joseph Schumpeter was most prolific during the years 1858\u20131940, while Norman Angell's notable works were primarily produced around the early to mid-20th century, particularly during the 1900s to the 1930s"
+      },
+      {
+        "id": "squad_27",
+        "title": "Economic_inequality",
+        "question": "How do competing businesses attract workers?",
+        "correct_answer": "offering a higher wage",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Competing businesses attract workers by offering higher wages, better benefits, improved working conditions, and additional incentives such as bonuses or flexible work arrangements",
+        "adversarial_answer": "Competing businesses attract workers by offering higher wages and better benefits than their competitors"
+      },
+      {
+        "id": "squad_28",
+        "title": "Super_Bowl_50",
+        "question": "How many teams up to Super Bowl 50 have been to the championship game eight times?",
+        "correct_answer": "four",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Up to Super Bowl 50, there are three teams that have been to the championship game eight times: the Pittsburgh Steelers, the New England Patriots, and the Dallas Cowboys",
+        "adversarial_answer": "Up to Super Bowl 50, the teams that have been to the championship game eight times are the Pittsburgh Steelers and the New England Patriots"
+      },
+      {
+        "id": "squad_29",
+        "title": "Steam_engine",
+        "question": "What plants create most electric power?",
+        "correct_answer": "steam turbine",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Steam power plants create most electric power",
+        "adversarial_answer": "The plants that create the most electric power are typically large-scale thermal power plants, including coal, natural gas, and nuclear power plants"
+      },
+      {
+        "id": "squad_30",
+        "title": "Newcastle_upon_Tyne",
+        "question": "The epidemic in Newcastle was the most what in any British city at the time?",
+        "correct_answer": "devastating loss",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The epidemic in Newcastle was the most severe in any British city at the time",
+        "adversarial_answer": "The epidemic in Newcastle was the most severe in any British city at the time"
+      },
+      {
+        "id": "squad_31",
+        "title": "Sky_(United_Kingdom)",
+        "question": "What additional srevice did BSkyB offer besides Video on Demand that they claimed offered \"substantially more value\"?",
+        "correct_answer": "HD channels",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "BSkyB claimed that they offered additional services such as \"Sky+,\" which allowed users to record, pause, and rewind live television, providing \"substantially more value\" beyond just Video on Demand",
+        "adversarial_answer": "BSkyB claimed that their additional service besides Video on Demand was Sky+ which offered \"substantially more value"
+      },
+      {
+        "id": "squad_32",
+        "title": "Nikola_Tesla",
+        "question": "Who did Tesla think would run the world of the future?",
+        "correct_answer": "women",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Tesla thought that women would run the world of the future",
+        "adversarial_answer": "Tesla believed that women would run the world of the future"
+      },
+      {
+        "id": "squad_33",
+        "title": "Islamism",
+        "question": "What have many HT members graduated to joining?",
+        "correct_answer": "terrorist groups",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Many HT members have graduated to joining armed jihadist groups",
+        "adversarial_answer": "Many HT members have graduated to joining political parties"
+      },
+      {
+        "id": "squad_34",
+        "title": "Victoria_and_Albert_Museum",
+        "question": "Approximately how many items are in the costume collection of the V&A?",
+        "correct_answer": "over 14,000",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The costume collection of the V&A contains approximately 30,000 items",
+        "adversarial_answer": "The costume collection of the V&A contains approximately 30,000 items"
+      },
+      {
+        "id": "squad_35",
+        "title": "Fresno,_California",
+        "question": "Which park is home to the Fresno Chafffee Zoo?",
+        "correct_answer": "Roeding Park",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The Fresno Chaffee Zoo is located in Woodward Park",
+        "adversarial_answer": "The Fresno Chaffee Zoo is located in Woodward Park"
+      },
+      {
+        "id": "squad_36",
+        "title": "Geology",
+        "question": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called what?",
+        "correct_answer": "particular closure temperature",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called the closure temperature",
+        "adversarial_answer": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called the closure temperature"
+      },
+      {
+        "id": "squad_37",
+        "title": "Teacher",
+        "question": "What could someone be investigated for?",
+        "correct_answer": "allegations of professional misconduct",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Someone could be investigated for allegations or complaints related to their professional conduct or practices as a teacher",
+        "adversarial_answer": "Someone could be investigated for allegations involving standards of practice or complaints related to the conduct of teachers within colleges or educational programs"
+      },
+      {
+        "id": "squad_38",
+        "title": "Economic_inequality",
+        "question": "What are examples of economic actors?",
+        "correct_answer": "worker, capitalist/business owner, landlord",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Examples of economic actors include individuals (such as workers and consumers), businesses (such as corporations and small enterprises), governments (local, regional, and national), and institutions (such as banks and non-profit organizations)",
+        "adversarial_answer": "Examples of economic actors include individuals, households, firms, and governments"
+      },
+      {
+        "id": "squad_39",
+        "title": "Immune_system",
+        "question": "What field involves the study of the immune system?",
+        "correct_answer": "Immunology",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The field that involves the study of the immune system is called Immunology",
+        "adversarial_answer": "The field that involves the study of the immune system is called Immunology"
+      },
+      {
+        "id": "squad_40",
+        "title": "Immune_system",
+        "question": "What are the phagocytes that are located in tissues in contact with the external environment called?",
+        "correct_answer": "Dendritic cells",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The phagocytes located in tissues in contact with the external environment are called Dendritic Cells (DC)",
+        "adversarial_answer": "The phagocytes located in tissues that are in contact with the external environment are called dendritic cells (DCs)"
+      },
+      {
+        "id": "squad_41",
+        "title": "Newcastle_upon_Tyne",
+        "question": "What did the merchants of Newcastle plot to do to Timothy Dexter?",
+        "correct_answer": "ruin him",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The merchants of Newcastle plotted to ruin Timothy Dexter by attempting to undermine his business and reputation, as he was seen as a threat to their monopoly in the coal trade",
+        "adversarial_answer": "The context provided does not contain specific information about the merchants of Newcastle plotting against Timothy Dexter"
+      },
+      {
+        "id": "squad_42",
+        "title": "Nikola_Tesla",
+        "question": "What job did Tesla's father have in Gospic?",
+        "correct_answer": "pastor",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Tesla's father, Milka, was a priest in Gospic",
+        "adversarial_answer": "Tesla's father, Milutin Tesla, was a priest in Gospic"
+      },
+      {
+        "id": "squad_43",
+        "title": "Super_Bowl_50",
+        "question": "Which hotel did the Panthers stay at for the Super Bowl?",
+        "correct_answer": "San Jose Marriott.",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not specify which hotel the Panthers stayed at for the Super Bowl",
+        "adversarial_answer": "The Panthers stayed at the Santa Clara Marriott for the Super Bowl"
+      },
+      {
+        "id": "squad_44",
+        "title": "French_and_Indian_War",
+        "question": "What are other alternative names for French and Indian War?",
+        "correct_answer": "Fourth Intercolonial War and the Great War for the Empire",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The French and Indian War is also known by several alternative names, including the Seven Years' War, particularly in a global context, and the Great War for the Empire",
+        "adversarial_answer": "The French and Indian War is also known by several alternative names, including the Seven Years' War (which refers to the broader conflict involving multiple nations), the Great War for Empire, and the Anglo-French War"
+      },
+      {
+        "id": "squad_45",
+        "title": "Southern_California",
+        "question": "Outside of its use of automobiles, what else is southern California famous for using?",
+        "correct_answer": "highways",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Southern California is also famous for its extensive public transportation systems, including buses and light rail, as well as its bicycle-friendly infrastructure and walkable neighborhoods in certain areas",
+        "adversarial_answer": "Southern California is also famous for its extensive public transportation systems, including buses and light rail, as well as its bike-friendly infrastructure and pedestrian-friendly areas in certain urban centers"
+      },
+      {
+        "id": "squad_46",
+        "title": "Newcastle_upon_Tyne",
+        "question": "What was the last name of the designers of Newcastle's library?",
+        "correct_answer": "Green",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not include any information about the designers of Newcastle's library or their last names",
+        "adversarial_answer": "The context provided does not include information about the designers of Newcastle's library, so I cannot provide the last name of the designers"
+      },
+      {
+        "id": "squad_47",
+        "title": "Apollo_program",
+        "question": "How many people were on the test flight of the AS-206?",
+        "correct_answer": "unmanned",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The AS-206 test flight was unmanned, so there were no people on that flight",
+        "adversarial_answer": "The AS-206 test flight was unmanned, so there were no people on the test flight"
+      },
+      {
+        "id": "squad_48",
+        "title": "Southern_California",
+        "question": "What is the state average growth rate?",
+        "correct_answer": "10.0%",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not include specific numerical values or details about the state average growth rate",
+        "adversarial_answer": "The context provided does not include specific numerical data regarding the state average growth rate"
+      },
+      {
+        "id": "squad_49",
+        "title": "Black_Death",
+        "question": "When was the study on sequenced Y genomes published?",
+        "correct_answer": "October 2011",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The study on sequenced Y genomes was published in 2015",
+        "adversarial_answer": "The study on sequenced Y genomes was published in 2015"
+      }
+    ],
+    "success_rate": 0.72,
+    "total_examples": 50,
+    "successful_attacks": 36
+  },
+  {
+    "config_name": "Very Aggressive Compression",
+    "config": {
+      "name": "Very Aggressive Compression",
+      "compression_rate": 0.2,
+      "num_words_to_attack": 20,
+      "attack_strategy": "hybrid"
+    },
+    "examples": [
+      {
+        "id": "squad_0",
+        "title": "Private_school",
+        "question": "In what year did Massachusetts first require children to be educated in schools?",
+        "correct_answer": "1852",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Massachusetts first required children to be educated in schools in the year 1852",
+        "adversarial_answer": "Massachusetts first required children to be educated in schools in 1852"
+      },
+      {
+        "id": "squad_1",
+        "title": "Chloroplast",
+        "question": "When were stromules discovered?",
+        "correct_answer": "1962",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Stromules were discovered in 1992",
+        "adversarial_answer": "Stromules were discovered in the early 2000s"
+      },
+      {
+        "id": "squad_2",
+        "title": "Victoria_and_Albert_Museum",
+        "question": "Which artist who had a major influence on the Gothic Revival is represented in the V&A's British galleries?",
+        "correct_answer": "Horace Walpole",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The artist who had a major influence on the Gothic Revival and is represented in the V&A's British galleries is Augustus Pugin",
+        "adversarial_answer": "The artist who had a major influence on the Gothic Revival and is represented in the V&A's British galleries is Augustus Pugin"
+      },
+      {
+        "id": "squad_3",
+        "title": "University_of_Chicago",
+        "question": "In 1890, who did the university decide to team up with?",
+        "correct_answer": "several regional colleges and universities",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "In 1896, the university decided to team up with Shimer College in Mount Carroll, Illinois",
+        "adversarial_answer": "In 1890, the University of Chicago decided to team up with Kalamazoo College"
+      },
+      {
+        "id": "squad_4",
+        "title": "Super_Bowl_50",
+        "question": "Who got a touchdown making the score 10-7?",
+        "correct_answer": "Jonathan Stewart",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Jonathan Stewart got a touchdown making the score 10-7",
+        "adversarial_answer": "Jonathan Stewart got the touchdown making the score 10-7"
+      },
+      {
+        "id": "squad_5",
+        "title": "Private_school",
+        "question": "How many Examination Boards exist in India?",
+        "correct_answer": "30",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "As of my last knowledge update in October 2023, India has numerous Examination Boards, including state boards, central boards, and various other specialized boards",
+        "adversarial_answer": "The context provided does not specify the exact number of Examination Boards in India"
+      },
+      {
+        "id": "squad_6",
+        "title": "American_Broadcasting_Company",
+        "question": "Who started rumors in 2008 that ABC would sell its ten owned-and-operated stations?",
+        "correct_answer": "Caris & Co.",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "In 2008, rumors that ABC would sell its ten owned-and-operated stations were started by the New York Post",
+        "adversarial_answer": "The rumors in 2008 that ABC would sell its ten owned-and-operated stations were started by various sources, but specific individuals are not mentioned in the provided context"
+      },
+      {
+        "id": "squad_7",
+        "title": "Super_Bowl_50",
+        "question": "Which network broadcasted the 50th Super Bowl game? ",
+        "correct_answer": "CBS",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The 50th Super Bowl game was broadcasted by CBS",
+        "adversarial_answer": "The 50th Super Bowl game was broadcasted by CBS"
+      },
+      {
+        "id": "squad_8",
+        "title": "1973_oil_crisis",
+        "question": "Why was this short termed organization created?",
+        "correct_answer": "coordinate the response to the embargo",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The short-term organization was likely created to address the energy crisis and manage the nation's fuel supply during a time of heightened concern about oil prices and availability, particularly following the 1973 oil embargo",
+        "adversarial_answer": "The short-termed organization was likely created in response to the energy crisis of the early 1970s, particularly to address issues related to fuel shortages and the management of petroleum resources during a time of economic uncertainty and rising oil prices"
+      },
+      {
+        "id": "squad_9",
+        "title": "Amazon_rainforest",
+        "question": "What does LGM stands for?",
+        "correct_answer": "Last Glacial Maximum",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "LGM stands for Last Glacial Maximum",
+        "adversarial_answer": "LGM stands for Last Glacial Maximum"
+      },
+      {
+        "id": "squad_10",
+        "title": "Computational_complexity_theory",
+        "question": "What is the paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems?",
+        "correct_answer": "\"Reducibility Among Combinatorial Problems\"",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems is titled \"Reducibility Among Combinatorial Problems",
+        "adversarial_answer": "The paper written by Richard Karp in 1972 that ushered in a new era of understanding between intractability and NP-complete problems is titled \"Reducibility Among Combinatorial Problems"
+      },
+      {
+        "id": "squad_11",
+        "title": "Rhine",
+        "question": "What Lake in a German island Mainau receives a fraction of the Rhine's flow?",
+        "correct_answer": "Lake \u00dcberlingen",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The lake on the German island of Mainau that receives a fraction of the Rhine's flow is Lake Constance (Bodensee)",
+        "adversarial_answer": "The lake in question is the \"Mainau Lake\" on the German island of Mainau, which receives a fraction of the Rhine's flow"
+      },
+      {
+        "id": "squad_12",
+        "title": "American_Broadcasting_Company",
+        "question": "What studio does ABC own at 1500 Broadway in NYC?",
+        "correct_answer": "Times Square Studios",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "ABC owns the ABC Television Studio at 1500 Broadway in NYC",
+        "adversarial_answer": "ABC owns the studio known as ABC Studios at 1500 Broadway in NYC"
+      },
+      {
+        "id": "squad_13",
+        "title": "University_of_Chicago",
+        "question": "How many fraternities are apart of the university?",
+        "correct_answer": "fifteen",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The university has a total of fraternities",
+        "adversarial_answer": "There are fifteen fraternities at the university"
+      },
+      {
+        "id": "squad_14",
+        "title": "American_Broadcasting_Company",
+        "question": "At what address did Goldenson secure a new headquarters for ABC?",
+        "correct_answer": "1330 Avenue of the Americas in Manhattan",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not include information about the address where Goldenson secured a new headquarters for ABC",
+        "adversarial_answer": "Goldenson secured a new headquarters for ABC at 1330 Avenue of the Americas"
+      },
+      {
+        "id": "squad_15",
+        "title": "Imperialism",
+        "question": "Who had established the Russian empire to its former glory prior to 1921?",
+        "correct_answer": "Bolshevik leaders",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The Bolshevik leaders had reestablished a polity with roughly the same extent as the Russian Empire by 1921",
+        "adversarial_answer": "The Bolshevik leaders, under the leadership of Lenin, had effectively reestablished the Russian empire to its former glory prior to 1921"
+      },
+      {
+        "id": "squad_16",
+        "title": "Prime_number",
+        "question": "What does the Riemann hypothesis state the source of irregularity in the distribution of points comes from?",
+        "correct_answer": "random noise",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The Riemann hypothesis states that the source of irregularity in the distribution of prime numbers comes from the non-trivial zeros of the Riemann zeta function, which are believed to all have their real part equal to 1/2",
+        "adversarial_answer": "The Riemann hypothesis states that the source of irregularity in the distribution of prime numbers comes from the non-trivial zeros of the Riemann zeta function, specifically that these zeros have a real part equal to 1/2"
+      },
+      {
+        "id": "squad_17",
+        "title": "Martin_Luther",
+        "question": "Which work of Luther's is effective in teaching children?",
+        "correct_answer": "Small Catechism",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Luther's Small Catechism is effective in teaching children",
+        "adversarial_answer": "Luther's Small Catechism is effective in teaching children"
+      },
+      {
+        "id": "squad_18",
+        "title": "Civil_disobedience",
+        "question": "How was the civil disobedience shown in Antigone?",
+        "correct_answer": "obey her conscience rather than human law",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "In Sophocles' play Antigone, civil disobedience is demonstrated through the character of Antigone herself",
+        "adversarial_answer": "In Sophocles' play \"Antigone,\" civil disobedience is prominently displayed through the character of Antigone herself"
+      },
+      {
+        "id": "squad_19",
+        "title": "Ctenophora",
+        "question": "Where do juvenile platyctenids live?",
+        "correct_answer": "among the plankton",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Juvenile platyctenids generally live in marine environments, as they are typically found in shallow waters and are associated with various substrates, often in association with coral reefs or other structures",
+        "adversarial_answer": "Juvenile platyctenids live in the same habitat as their adult counterparts, typically in marine environments"
+      },
+      {
+        "id": "squad_20",
+        "title": "Victoria_(Australia)",
+        "question": "How often are elections held for the Victorian Parliament?",
+        "correct_answer": "every four years",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Elections for the Victorian Parliament are held every four years",
+        "adversarial_answer": "Elections for the Victorian Parliament are held every four years"
+      },
+      {
+        "id": "squad_21",
+        "title": "Force",
+        "question": "What magnetic and electric force acts on a charge?",
+        "correct_answer": "unified electromagnetic",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The magnetic and electric forces that act on a charge are collectively known as the Lorentz force",
+        "adversarial_answer": "The force that acts on a charge due to electromagnetic interactions can be described by the Lorentz force, which is the sum of the electric force and the magnetic force"
+      },
+      {
+        "id": "squad_22",
+        "title": "Yuan_dynasty",
+        "question": "What kinds of growth did Kublai encourage?",
+        "correct_answer": "commercial, scientific, and cultural",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Kublai Khan encouraged scientific growth, commercial growth, and cultural growth",
+        "adversarial_answer": "Kublai Khan encouraged scientific and cultural growth, as well as economic growth through support for the merchants of the Silk Road trade network by providing loans and protection"
+      },
+      {
+        "id": "squad_23",
+        "title": "Doctor_Who",
+        "question": "What was the name of the first episode of the new Doctor Who series?",
+        "correct_answer": "Rose",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The name of the first episode of the new Doctor Who series is \"Rose",
+        "adversarial_answer": "The name of the first episode of the new Doctor Who series was \"Rose"
+      },
+      {
+        "id": "squad_24",
+        "title": "Southern_California",
+        "question": "Each of the extended metropolitan areas has a population that exceeds what number?",
+        "correct_answer": "five million",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context does not provide a specific population number for the extended metropolitan areas",
+        "adversarial_answer": "Each of the extended metropolitan areas has a population that exceeds 17,786,419"
+      },
+      {
+        "id": "squad_25",
+        "title": "Civil_disobedience",
+        "question": "Why is giving a defiant speech sometimes more harmful for the individual?",
+        "correct_answer": "lack of remorse",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Giving a defiant speech can be more harmful for the individual because it may be perceived as a lack of remorse or acceptance of responsibility for their actions",
+        "adversarial_answer": "Giving a defiant speech can be more harmful for the individual because it may lead to a stronger backlash from authorities, increased legal penalties, and a negative public perception"
+      },
+      {
+        "id": "squad_26",
+        "title": "Imperialism",
+        "question": "When were Joseph Schumpeter and Norman Angell at their most prolific writing period?",
+        "correct_answer": "before World War I",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Joseph Schumpeter was at his most prolific writing period from 1858 to 1940, while Norman Angell was prolific from 1883 to 1950",
+        "adversarial_answer": "Joseph Schumpeter was most prolific during the years 1858\u20131940, and Norman Angell was most prolific during the years 1883\u20131950"
+      },
+      {
+        "id": "squad_27",
+        "title": "Economic_inequality",
+        "question": "How do competing businesses attract workers?",
+        "correct_answer": "offering a higher wage",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Competing businesses attract workers by offering higher wages, better benefits, improved working conditions, and opportunities for advancement",
+        "adversarial_answer": "Competing businesses attract workers by offering higher wages, better benefits, improved working conditions, and opportunities for career advancement"
+      },
+      {
+        "id": "squad_28",
+        "title": "Super_Bowl_50",
+        "question": "How many teams up to Super Bowl 50 have been to the championship game eight times?",
+        "correct_answer": "four",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Up to Super Bowl 50, the teams that have been to the championship game eight times are the New England Patriots and the Pittsburgh Steelers",
+        "adversarial_answer": "As of Super Bowl 50, there are two teams that have been to the championship game eight times: the Pittsburgh Steelers and the New England Patriots"
+      },
+      {
+        "id": "squad_29",
+        "title": "Steam_engine",
+        "question": "What plants create most electric power?",
+        "correct_answer": "steam turbine",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Steam plants create most electric power",
+        "adversarial_answer": "The plants that create most electric power are typically fossil fuel power plants, nuclear power plants, and renewable energy plants such as hydroelectric, wind, and solar power plants"
+      },
+      {
+        "id": "squad_30",
+        "title": "Newcastle_upon_Tyne",
+        "question": "The epidemic in Newcastle was the most what in any British city at the time?",
+        "correct_answer": "devastating loss",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The epidemic in Newcastle was the most deadly in any British city at the time",
+        "adversarial_answer": "The epidemic in Newcastle was the most deadly in any British city at the time"
+      },
+      {
+        "id": "squad_31",
+        "title": "Sky_(United_Kingdom)",
+        "question": "What additional srevice did BSkyB offer besides Video on Demand that they claimed offered \"substantially more value\"?",
+        "correct_answer": "HD channels",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "BSkyB claimed that their additional service, besides Video on Demand, was the provision of a greater number of channels, which they argued offered \"substantially more value",
+        "adversarial_answer": "BSkyB claimed to offer \"substantially more value\" through their additional service of Sky+ alongside Video on Demand"
+      },
+      {
+        "id": "squad_32",
+        "title": "Nikola_Tesla",
+        "question": "Who did Tesla think would run the world of the future?",
+        "correct_answer": "women",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "Tesla believed that women would run the world of the future",
+        "adversarial_answer": "Tesla believed that women would run the world of the future"
+      },
+      {
+        "id": "squad_33",
+        "title": "Islamism",
+        "question": "What have many HT members graduated to joining?",
+        "correct_answer": "terrorist groups",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Many HT (Hizb ut-Tahrir) members have graduated to joining armed jihadist groups",
+        "adversarial_answer": "Many HT (Hizb ut-Tahrir) members have graduated to joining elite groups or movements that aim to influence Muslim public opinion and facilitate change through non-violent means"
+      },
+      {
+        "id": "squad_34",
+        "title": "Victoria_and_Albert_Museum",
+        "question": "Approximately how many items are in the costume collection of the V&A?",
+        "correct_answer": "over 14,000",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The costume collection of the V&A contains approximately 30,000 items",
+        "adversarial_answer": "The costume collection of the V&A contains approximately 30,000 items"
+      },
+      {
+        "id": "squad_35",
+        "title": "Fresno,_California",
+        "question": "Which park is home to the Fresno Chafffee Zoo?",
+        "correct_answer": "Roeding Park",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The Fresno Chaffee Zoo is located in Roeding Park, which is one of the large public parks within the city limits of Fresno",
+        "adversarial_answer": "The Fresno Chaffee Zoo is located in Woodward Park"
+      },
+      {
+        "id": "squad_36",
+        "title": "Geology",
+        "question": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called what?",
+        "correct_answer": "particular closure temperature",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called the \"closure temperature",
+        "adversarial_answer": "The point at which different radiometric isotopes stop diffusing into and out of the crystal lattice is called the \"closure temperature"
+      },
+      {
+        "id": "squad_37",
+        "title": "Teacher",
+        "question": "What could someone be investigated for?",
+        "correct_answer": "allegations of professional misconduct",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Someone could be investigated for not adhering to the clear standards of practice set by the college, failing to fulfill the functions of their role as a member, or for any misconduct related to the programs and functions of the schools they are involved with, particularly in",
+        "adversarial_answer": "Someone could be investigated for allegations related to their conduct as a teacher, which may involve failing to meet established standards of practice or violating accreditation requirements"
+      },
+      {
+        "id": "squad_38",
+        "title": "Economic_inequality",
+        "question": "What are examples of economic actors?",
+        "correct_answer": "worker, capitalist/business owner, landlord",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Examples of economic actors include individuals (consumers and workers), businesses (firms and corporations), governments, and organizations (nonprofits and cooperatives)",
+        "adversarial_answer": "Examples of economic actors include individuals (consumers and workers), businesses (firms and corporations), governments, and financial institutions (banks and investment firms)"
+      },
+      {
+        "id": "squad_39",
+        "title": "Immune_system",
+        "question": "What field involves the study of the immune system?",
+        "correct_answer": "Immunology",
+        "success": false,
+        "answer_changed": false,
+        "original_answer": "The field that involves the study of the immune system is immunology",
+        "adversarial_answer": "The field that involves the study of the immune system is Immunology"
+      },
+      {
+        "id": "squad_40",
+        "title": "Immune_system",
+        "question": "What are the phagocytes that are located in tissues in contact with the external environment called?",
+        "correct_answer": "Dendritic cells",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The phagocytes located in tissues in contact with the external environment are called Dendritic cells (DC)",
+        "adversarial_answer": "The phagocytes that are located in tissues in contact with the external environment are called dendritic cells"
+      },
+      {
+        "id": "squad_41",
+        "title": "Newcastle_upon_Tyne",
+        "question": "What did the merchants of Newcastle plot to do to Timothy Dexter?",
+        "correct_answer": "ruin him",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The merchants of Newcastle plotted to undermine Timothy Dexter by attempting to drive him out of business",
+        "adversarial_answer": "The merchants of Newcastle plotted to undermine Timothy Dexter by attempting to ruin his business, as they were unhappy with his success in the coal trade and his disregard for their monopoly"
+      },
+      {
+        "id": "squad_42",
+        "title": "Nikola_Tesla",
+        "question": "What job did Tesla's father have in Gospic?",
+        "correct_answer": "pastor",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Tesla's father, Milutin Tesla, was a writer and a priest in Gospic",
+        "adversarial_answer": "Tesla's father, Milutin Tesla, was a priest in Gospic"
+      },
+      {
+        "id": "squad_43",
+        "title": "Super_Bowl_50",
+        "question": "Which hotel did the Panthers stay at for the Super Bowl?",
+        "correct_answer": "San Jose Marriott.",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not contain information about which hotel the Panthers stayed at for the Super Bowl",
+        "adversarial_answer": "The context provided does not contain any information regarding the hotel where the Panthers stayed for the Super Bowl"
+      },
+      {
+        "id": "squad_44",
+        "title": "French_and_Indian_War",
+        "question": "What are other alternative names for French and Indian War?",
+        "correct_answer": "Fourth Intercolonial War and the Great War for the Empire",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The French and Indian War is also known by several alternative names, including the Seven Years' War (when considering the broader global conflict), the Great War for the Empire, and the Anglo-French War",
+        "adversarial_answer": "Other alternative names for the French and Indian War include the Seven Years' War (in a broader context, as it was part of this global conflict), the Great War for the Empire, and the War of Conquest"
+      },
+      {
+        "id": "squad_45",
+        "title": "Southern_California",
+        "question": "Outside of its use of automobiles, what else is southern California famous for using?",
+        "correct_answer": "highways",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "Southern California is also famous for its use of public transportation systems, including buses and trains, as well as its extensive network of bike paths and walking trails",
+        "adversarial_answer": "Southern California is also famous for its extensive public transportation systems, including buses and metro rail services"
+      },
+      {
+        "id": "squad_46",
+        "title": "Newcastle_upon_Tyne",
+        "question": "What was the last name of the designers of Newcastle's library?",
+        "correct_answer": "Green",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The last name of the designers of Newcastle's library is Green",
+        "adversarial_answer": "The last name of the designers of Newcastle's library is \"Green"
+      },
+      {
+        "id": "squad_47",
+        "title": "Apollo_program",
+        "question": "How many people were on the test flight of the AS-206?",
+        "correct_answer": "unmanned",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The AS-206 test flight was unmanned, so there were no people on the test flight",
+        "adversarial_answer": "The AS-206 test flight was unmanned, so there were zero people on the test flight"
+      },
+      {
+        "id": "squad_48",
+        "title": "Southern_California",
+        "question": "What is the state average growth rate?",
+        "correct_answer": "10.0%",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The context provided does not include enough information to determine the state average growth rate",
+        "adversarial_answer": "The context provided does not include specific information about the state average growth rate"
+      },
+      {
+        "id": "squad_49",
+        "title": "Black_Death",
+        "question": "When was the study on sequenced Y genomes published?",
+        "correct_answer": "October 2011",
+        "success": true,
+        "answer_changed": true,
+        "original_answer": "The study on sequenced Y genomes was published in 2015",
+        "adversarial_answer": "The study on sequenced Y genomes was published in 2017"
+      }
+    ],
+    "success_rate": 0.78,
+    "total_examples": 50,
+    "successful_attacks": 39
+  }
+]
