@@ -1,18 +1,15 @@
-#!/usr/bin/env python3
-
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
 from typing import List, Tuple
 
 class PPLCalculator:
-    def __init__(self, model_name: str = "gpt2"):
+    def __init__(self, model, tokenizer):
         self.device = "cpu"
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(model_name)
+        self.model = model
         self.model.eval()
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
 
-        if self.tokenizer.pad_token is None:
-            self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.tokenizer = tokenizer
 
     def calculate_perplexity(self, text: str) -> float:
         encodings = self.tokenizer(text, return_tensors='pt')
