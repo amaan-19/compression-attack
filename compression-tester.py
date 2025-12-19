@@ -3,7 +3,6 @@
 from typing import Dict, List, Tuple
 
 class CompressionTester:
-
     def __init__(self):
         self.compressor = None
         self.setup_llmlingua()
@@ -11,7 +10,7 @@ class CompressionTester:
     def setup_llmlingua(self):
         try:
             from llmlingua import PromptCompressor
-            self.compressor = PromptCompressor(model_name="microsoft/llmlingua-2-xlm-roberta-large-meetingbank", use_llmlingua2=True, device_map="cpu")
+            self.compressor = PromptCompressor(model_name="gpt-2", use_llmlingua2=True, device_map="cpu")
         except ImportError:
             print("Error: LLMLingua not installed")
             raise
@@ -26,6 +25,7 @@ class CompressionTester:
     def compare_compressions(self, original_context: str, adversarial_context: str, compression_rate: float) -> Dict:
         print(f"\nCompressing with LLMLingua...")
         print(f"Compression rate: {compression_rate}")
+
         # compress both contexts
         original_result = self.compress(context=original_context, compression_rate=compression_rate)
         adversarial_result = self.compress(context=adversarial_context, compression_rate=compression_rate)
@@ -37,20 +37,13 @@ class CompressionTester:
         }
 
     def print_comparison(self, comparison: Dict):
-        """Pretty print comparison results"""
-        print("\n" + "="*70)
         print("COMPRESSION COMPARISON RESULTS")
-        print("="*70)
-
         print("\nORIGINAL COMPRESSED:")
         print(f"  {comparison['original_compressed']}")
         print(f"  Ratio: {comparison['compression_ratio_orig']}")
-
         print("\nADVERSARIAL COMPRESSED:")
         print(f"  {comparison['adversarial_compressed']}")
         print(f"  Ratio: {comparison['compression_ratio_adv']}")
-        print("\n" + "="*70)
-        print("="*70 + "\n")
 
 
 if __name__ == "__main__":
@@ -69,7 +62,7 @@ if __name__ == "__main__":
 
     # Generate adversarial context
     config = AttackConfig(
-        attack_mode="degradation",
+        attack_mode="promotion",
         stealth_threshold=0.8,
         ppl_margin=2.0
     )

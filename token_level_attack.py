@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from typing import List, Optional, Dict, Literal
 from dataclasses import dataclass
 
@@ -142,11 +140,17 @@ class HardComTokenAttack:
             config: AttackConfig,
             num_words: int = 5  # How many high-PPL words to attack
     ) -> str:
+        
         # Step 1: Get ranked list of high-PPL words (Section 4.1.1)
+        print("Getting ranked list of high-ppl words...")
         word_ppls = ppl_calc.calculate_word_ppls(context)
 
         # Step 2: Select top N high-PPL words as targets
+        print("Choosing target words...")
         target_words = [word for word, ppl in word_ppls[:num_words]]
+        print("Target Words:")
+        for word in target_words:
+            print("{word}\n")
 
         # Step 3: Attack each target word
         modified_context = context
@@ -160,42 +164,45 @@ class HardComTokenAttack:
         return modified_context
 
 
-# if __name__ == "__main__":
-#     from ppl_calculator import PPLCalculator
-#     from stealth_calculator import StealthCalculator
-#
-#     # Initialize components
-#     ppl_calc = PPLCalculator()
-#     stealth_calc = StealthCalculator()
-#     perturber = HardComTokenAttack()
-#
-#     # Example context
-#     context = "iPhone 16 Pro features a sleek lightweight titanium design with advanced capabilities"
-#
-#     print("Original context:")
-#     print(f"  {context}\n")
-#
-#     # Show high-PPL words (attack targets)
-#     word_ppls = ppl_calc.calculate_word_ppls(context)
-#     print("Top 5 high-PPL words (will be attacked):")
-#     for i, (word, ppl) in enumerate(word_ppls[:5], 1):
-#         print(f"  {i}. {word} (PPL: {ppl:.2f})")
-#     print()
-#
-#     # Promotion attack
-#     config = AttackConfig(
-#         attack_mode="promotion",
-#         stealth_threshold=0.8,
-#         ppl_margin=2.0
-#     )
-#
-#     print("Performing promotion attack...")
-#     adversarial_context = perturber.attack_context(
-#         context, ppl_calc, stealth_calc, config, num_words=3
-#     )
-#
-#     print(f"\nAdversarial context:")
-#     print(f"  {adversarial_context}")
-#
-#     stealth = stealth_calc.calculate_stealthiness(context, adversarial_context, method="token")
-#     print(f"\nStealthiness: {stealth:.3f}")
+if __name__ == "__main__":
+    from ppl_calculator import PPLCalculator
+    from stealth_calculator import StealthCalculator
+
+    # Initialize components
+    ppl_calc = PPLCalculator()
+    stealth_calc = StealthCalculator()
+    perturber = HardComTokenAttack()
+
+    # Example context
+    context = "iPhone 16 Pro features a sleek lightweight titanium design with advanced capabilities"
+
+    print("Original context:")
+    print(f"  {context}\n")
+
+    # Show high-PPL words (attack targets)
+    word_ppls = ppl_calc.calculate_word_ppls(context)
+    print("Top 5 high-PPL words (will be attacked):")
+    for i, (word, ppl) in enumerate(word_ppls[:5], 1):
+        print(f"  {i}. {word} (PPL: {ppl:.2f})")
+    print()
+
+    # Promotion attack
+    config = AttackConfig(
+        attack_mode="promotion",
+        stealth_threshold=0.8,
+        ppl_margin=2.0
+    )
+
+    print("Performing promotion attack...")
+    adversarial_context = perturber.attack_context(
+        context, ppl_calc, stealth_calc, config, num_words=3
+    )
+
+    print(f"\nAdversarial context:")
+    print(f"  {adversarial_context}")
+
+    stealth = stealth_calc.calculate_stealthiness(context, adversarial_context, method="token")
+    print(f"\nStealthiness: {stealth:.3f}")
+
+
+    
