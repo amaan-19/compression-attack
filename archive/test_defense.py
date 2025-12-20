@@ -11,7 +11,7 @@ Run: python test_defense.py
 import sys
 sys.path.insert(0, '.')
 
-from compression_aware_defense import (
+from src.compression_aware_defense import (
     CompressionAwareDefense,
     PPLBasedCompressor,
     DefenseConfig,

@@ -27,7 +27,7 @@ from datasets import load_dataset
 class OpenAIBackend:
     def __init__(self, api_key=None):
         self.client = openai.OpenAI(api_key=api_key)
-        print("Using OpenAI API")
+        print("Using OpenAI API (gpt-4o-mini)")
     
     def query(self, prompt: str) -> str:
         response = self.client.chat.completions.create(
@@ -292,6 +292,10 @@ Answer:"""
         compressed_original = self.compress_text(context, compression_rate)
         print(f"Original context length: {len(context.split())} words")
         print(f"Compressed length: {len(compressed_original.split())} words")
+        print(f"\nOriginal context (first 200 chars):")
+        print(f"{context[:200]}...")
+        print(f"\nCompressed original (first 200 chars):")
+        print(f"{compressed_original[:200]}...")
         
         print("\n[2] Querying LLM with original compressed context...")
         original_answer = self.query_llm(compressed_original, question)
@@ -318,6 +322,10 @@ Answer:"""
         compressed_adversarial = self.compress_text(adversarial_context, compression_rate)
         print(f"Adversarial context length: {len(adversarial_context.split())} words")
         print(f"Compressed length: {len(compressed_adversarial.split())} words")
+        print(f"\nAdversarial context (first 200 chars):")
+        print(f"{adversarial_context[:200]}...")
+        print(f"\nCompressed adversarial (first 200 chars):")
+        print(f"{compressed_adversarial[:200]}...")
         
         # Step 4: Get adversarial answer
         print("\n[6] Querying LLM with adversarial compressed context...")
@@ -381,14 +389,14 @@ def load_squad_examples(num_examples: int = 50, seed: int = 42) -> List[Dict]:
 
 
 # Load SQuAD examples by default
-QA_EXAMPLES = load_squad_examples(num_examples=50)
+QA_EXAMPLES = load_squad_examples(num_examples=70)
 
 
 if __name__ == "__main__":
     # Simple test with first SQuAD example
     evaluator = QAEvaluator()
     
-    example = QA_EXAMPLES[0]
+    example = QA_EXAMPLES[62]
     
     print(f"\nTesting with SQuAD example: {example['title']}")
     print(f"Question: {example['question']}")

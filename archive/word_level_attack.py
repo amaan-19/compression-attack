@@ -185,8 +185,8 @@ class HardComWordAttack:
 
 
 if __name__ == "__main__":
-    from ppl_calculator import PPLCalculator
-    from stealth_calculator import StealthCalculator
+    from src.ppl_calculator import PPLCalculator
+    from src.stealth_calculator import StealthCalculator
 
     # Initialize components
     ppl_calc = PPLCalculator()

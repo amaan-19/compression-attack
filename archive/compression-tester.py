@@ -48,9 +48,9 @@ class CompressionTester:
 
 if __name__ == "__main__":
     # Test with token-level attack example
-    from token_level_attack import HardComTokenAttack, AttackConfig
-    from ppl_calculator import PPLCalculator
-    from stealth_calculator import StealthCalculator
+    from src.token_level_attack import HardComTokenAttack, AttackConfig
+    from src.ppl_calculator import PPLCalculator
+    from src.stealth_calculator import StealthCalculator
 
     # Setup
     ppl_calc = PPLCalculator()

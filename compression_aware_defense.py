@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-Compression-Aware Counterfactual Defense for Prompt Compression Attacks
-(Revised Implementation)
+Compression-Aware Counterfactual Defense
 
-Key Innovation:
-- Run compression on original input to identify retained vs dropped tokens
-- Generate variants with semantically-neutral modifications near compression boundaries
-- Measure whether token retention patterns remain stable across variants
-- CRITICAL: Adversarial inputs should show UNSTABLE retention near perturbed tokens
+This module implements a defense against prompt compression attacks by:
+1. Identifying tokens near compression decision boundaries
+2. Generating semantically-neutral perturbations near boundaries
+3. Measuring retention pattern stability across variants
+4. Flagging inputs with high instability as adversarial
 
-The insight is that CompressionAttack creates perturbations that are "fragile" - 
-they're specifically tuned to flip compression decisions. Small edits near these
-perturbations should cause the retention pattern to change dramatically.
+Main classes:
+- CompressionAwareDefense: Primary defense implementation
+- HardPromptCompressor: Simulates hard prompt compression
+- DefenseConfig: Configuration parameters
 """
 
 import numpy as np

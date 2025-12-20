@@ -1,5 +1,5 @@
 import json
-from qa_eval import QAEvaluator, QA_EXAMPLES
+from experiments.qa_eval import QAEvaluator, QA_EXAMPLES
 from typing import List, Dict
 from tqdm import tqdm
 

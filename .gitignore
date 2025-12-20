@@ -1,4 +1,6 @@
 __pycache__/ppl_calculator.cpython-313.pyc
-compression-tester.py
 __pycache__/stealth_calculator.cpython-313.pyc
 __pycache__/token_level_attack.cpython-313.pyc
+
+env/
+.DS_Store

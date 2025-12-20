@@ -20,16 +20,16 @@ from tqdm import tqdm
 
 # Try to import attack modules (may need path adjustment)
 try:
-    from token_level_attack import HardComTokenAttack, AttackConfig as TokenAttackConfig
-    from word_level_attack import HardComWordAttack, AttackConfig as WordAttackConfig
-    from ppl_calculator import PPLCalculator
-    from stealth_calculator import StealthCalculator
+    from src.token_level_attack import HardComTokenAttack, AttackConfig as TokenAttackConfig
+    from archive.word_level_attack import HardComWordAttack, AttackConfig as WordAttackConfig
+    from src.ppl_calculator import PPLCalculator
+    from src.stealth_calculator import StealthCalculator
     ATTACKS_AVAILABLE = True
 except ImportError:
     ATTACKS_AVAILABLE = False
     print("Warning: Attack modules not found. Using synthetic adversarial examples.")
 
-from compression_aware_defense import (
+from src.compression_aware_defense import (
     CompressionAwareDefense,
     PPLBasedCompressor,
     DefenseConfig,
