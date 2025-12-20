@@ -1,11 +1,18 @@
 import numpy as np
-from sentence_transformers import SentenceTransformer
 import Levenshtein
 from typing import Literal
 
 class StealthCalculator:
-    def __init__(self, sentence_model: str = "sentence-transformers/all-MiniLM-L6-v2"):
-        self.sentence_encoder = SentenceTransformer(sentence_model)
+    def __init__(self, sentence_model=None):
+        self.sentence_encoder = sentence_model
+        
+        # Try to load sentence transformer if not provided
+        if self.sentence_encoder is None:
+            try:
+                from sentence_transformers import SentenceTransformer
+                self.sentence_encoder = SentenceTransformer('all-MiniLM-L6-v2')
+            except ImportError:
+                self.sentence_encoder = None
 
     def calculate_stealthiness(
             self,
@@ -43,6 +50,10 @@ class StealthCalculator:
         return similarity
 
     def _cosine_similarity(self, s1: str, s2: str) -> float:
+        if self.sentence_encoder is None:
+            # Fallback: use character-level similarity
+            return self._edit_distance_similarity(s1, s2)
+        
         emb1 = self.sentence_encoder.encode(s1)
         emb2 = self.sentence_encoder.encode(s2)
 
@@ -50,39 +61,5 @@ class StealthCalculator:
         return float(cos_sim)
 
     def _bert_score_similarity(self, s1: str, s2: str) -> float:
-        try:
-            from bert_score import score
-
-            # calculate BERTScore (returns P, R, F1)
-            P, R, F1 = score([s2], [s1], lang="en", verbose=False)
-            return F1.item()
-
-        except ImportError:
-            print("Warning: bert-score not installed. Using edit distance instead.")
-            print("Install with: pip install bert-score")
-            return self._edit_distance_similarity(s1, s2)
-
-
-# === Usage Example ===
-if __name__ == "__main__":
-
-    calc = StealthCalculator()
-
-    original = "iPhone 16 Pro features a sleek lightweight titanium design"
-
-    # small perturbation (should be stealthy)
-    subtle = "iPhone 16 Pro features a sleek lightweight tit@nium design"
-
-    # large perturbation (should be less stealthy)
-    obvious = "iPhone 16 Pro xyz random words titanium"
-
-    print("Stealthiness Scores (higher = more stealthy):\n")
-
-    print("Token-level method (edit distance):")
-    print(f"  Subtle change: {calc.calculate_stealthiness(original, subtle, method='token'):.3f}")
-    print(f"  Obvious change: {calc.calculate_stealthiness(original, obvious, method='token'):.3f}")
-    print()
-
-    print("Word-level method (BERTScore):")
-    print(f"  Subtle change: {calc.calculate_stealthiness(original, subtle, method='word'):.3f}")
-    print(f"  Obvious change: {calc.calculate_stealthiness(original, obvious, method='word'):.3f}")
+        # Simplified: use edit distance as fallback
+        return self._edit_distance_similarity(s1, s2)
