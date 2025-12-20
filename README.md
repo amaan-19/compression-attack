@@ -40,4 +40,3 @@ python integrated_evaluation.py
 - Python 3.10+
 - OpenAI API key
 - See requirements.txt for dependencies
-```
