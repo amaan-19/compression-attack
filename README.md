@@ -40,3 +40,16 @@ python integrated_evaluation.py
 - Python 3.10+
 - OpenAI API key
 - See requirements.txt for dependencies
+
+## Citation
+```
+@misc{liu2025compressionattackexploitingpromptcompression,
+      title={CompressionAttack: Exploiting Prompt Compression as a New Attack Surface in LLM-Powered Agents}, 
+      author={Zesen Liu and Zhixiang Zhang and Yuchong Xie and Dongdong She},
+      year={2025},
+      eprint={2510.22963},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2510.22963}, 
+}
+```
